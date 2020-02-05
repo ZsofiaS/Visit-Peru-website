@@ -2,10 +2,10 @@
 
 @keyframes arrow {
   50% {
-    top: 160%;
+    top: 130%;
   }
   100% {
-    top: 150%;
+    top: 140%;
   }
 }
 * {
@@ -102,11 +102,17 @@ body {
   transform: rotate(315deg) translate(-30%, -50%);
   animation: arrow 2s linear infinite;
 }
-.home__heading--arrow {
+.home__heading--arrow:hover {
   cursor: pointer;
 }
-/* HOME MEDIA QUERIES */
+/*GENERAL MEDIA QUERIES*/
 @media only screen and (max-width: 600px) {
+  html {
+    font-size: 58%;
+  }
+}
+/* HOME MEDIA QUERIES */
+@media only screen and (max-width: 700px) {
   .home__header {
     flex-direction: column;
     height: auto;
@@ -130,6 +136,12 @@ body {
   }
   .home__navbar--active {
     display: block;
+  }
+  .home__heading--1:after {
+    top: 15%;
+  }
+  .home__heading--arrow {
+    top: 140%;
   }
 }
 
@@ -181,7 +193,7 @@ body {
 }
 .activities__content--left {
   text-align: left;
-  padding: 2rem 4rem 2rem 3rem;
+  padding: 2rem 6rem 2rem 3rem;
 }
 .activities__image--right {
   background-image: url("https://images.unsplash.com/photo-1465513670158-c3ac6c8d1a87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
@@ -197,15 +209,59 @@ body {
 }
 .activities__content--right {
   text-align: right;
-  padding: 2rem 3rem 2rem 4rem;
+  padding: 2rem 3rem 2rem 2rem;
 }
 /*ACTIVITIES MEDIA QUERIES */
+@media only screen and (max-width: 1000px) {
+  #activities {
+    padding: 3.5% 5% 5%;
+  }
+  .activities__container {
+    margin: 3rem auto;
+    width: 93%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #activities {
+    padding: 6% 5%;
+    text-align: justify;
+  }
+  .activities__container {
+    margin: 1rem auto;
+    width: 93%;
+    flex-direction: column-reverse;
+  }
+  .activities__container--right {
+    flex-direction: column;
+  }
+  .activities__content--left,
+  .activities__content--right {
+    padding: 1rem;
+  }
+  .activities__image--right,
+  .activities__image--left {
+    width: 85%;
+    height: 30rem;
+  }
+  .activities__image--right {
+    margin-left: 7rem;
+  }
+  .activities__text--right {
+    margin-top: 1.5rem;
+  }
+  .activities__heading--left {
+    left: 0;
+  }
+  .activities__heading--right {
+    left: 0;
+  }
+}
 
 /* DESTINATIONS */
 #destinations {
   background-color: ivory;
   position: relative;
-  text-align: center;
+  text-align: justify;
   padding: 3.5% 7% 5%;
 }
 .destinations__heading {
@@ -262,7 +318,7 @@ body {
   height: 30rem;
   z-index: 20;
   top: 33%;
-  left: 13%;
+  left: 11%;
   box-shadow: 15px 15px 20px rgba(0,0,0,0.3);
 }
 .destinations_container--4 p {
@@ -287,6 +343,51 @@ body {
 
 }
 /* DESTINATIONS MEDIA QUERIES */
+@media only screen and (max-width: 1000px) {
+.destinations_container--4 {
+  width: 35rem;
+  height: 25rem;
+  top: 50%;
+  left: 8%;
+}
+.destinations_container--4 p {
+  padding: 5rem 5rem;
+}
+.destinations__heading {
+  left: 2%;
+  z-index: 10;
+}
+
+}
+@media only screen and (max-width: 600px) {
+  .destinations__container--1,
+  .destinations__container--2,
+  .destinations__container--3 {
+    width: 33.3%;
+    height: 40rem;
+  }
+  .destinations__heading {
+    left: 2%;
+    top: -20%;
+    z-index: 10;
+  }
+  #destinations {
+    padding: 15% 10% 17%;
+  }
+  .destinations_container--4 {
+    width: 30rem;
+    height: 22rem;
+    top: 55%;
+    }
+  .destinations_container--4 p {
+      padding: 3rem 3rem;
+    }
+  .destinations__heading--1,
+  .destinations__heading--2,
+  .destinations__heading--3 {
+    font-size: 1.8rem;
+  }
+}
 
 /* PLAN */
 #plan {
@@ -310,11 +411,13 @@ body {
 .plan__container--1,
 .plan__container--2,
 .plan__container--3 {
-  width: 30%;
+  /* width: 30%; */
   background-color: ivory;
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  margin: 1rem;
+  border-radius: 5px;
 }
 .plan__text--container {
   padding: 1rem;
@@ -370,8 +473,46 @@ body {
   background-color: #009999;
   color: ivory;
   border-radius: 5px;
+  display: block;
+  width: 70%;
+  margin: 0 auto;
 }
 /* PLAN MEDIA QUERIES */
+@media only screen and (max-width: 1000px) {
+  #plan {
+    line-height: inherit;
+    flex-wrap: wrap;
+  }
+  .plan__container--1,
+  .plan__container--2,
+  .plan__container--3 {
+    padding: 2rem 1rem;
+    width: 70%;
+    margin: 3rem auto;
+  }
+  .plan__content {
+    flex-direction: column;
+  }
+  .plan-button {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #plan {
+    line-height: 1.5rem;
+    padding: 12% 4% 8%;
+  }
+  .plan-button {
+    width: 80%;
+  }
+  .plan__container--1,
+  .plan__container--2,
+  .plan__container--3 {
+    padding: 2rem 1rem;
+    width: 85%;
+    margin: 3rem auto;
+  }
+}
 
 /* FOOTER */
 #footer {
