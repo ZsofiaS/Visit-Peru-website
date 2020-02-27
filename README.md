@@ -5,7 +5,7 @@ A fully responsive website using HTML and CSS.
 ## Demo
 
 The app is not available to use online yet, but once it's up and running the link will be here: <br />
-[link](http://localhost:3000)
+[https://zsofias.github.io/Visit-Peru-website](https://zsofias.github.io/Visit-Peru-website)
 
 ## Tech used
 - HTML
